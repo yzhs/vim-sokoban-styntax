@@ -7,6 +7,9 @@ if exists("b:current_syntax")
     finish
 endif
 
+let b:current_syntax = "sokoban"
+
+syn match comment ';.*$'
 syn match wall '#'
 syn match worker '@'
 syn match box '\$'
@@ -14,6 +17,7 @@ syn match target '\.'
 syn match boxOnTarget '\*'
 syn match workerOnTarget '+'
 
+hi def link comment Comment
 hi def link worker Comment
 hi def link box Constant
 hi def link target Todo
