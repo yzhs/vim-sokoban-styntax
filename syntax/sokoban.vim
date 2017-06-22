@@ -7,16 +7,15 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn keyword wall '#'
-syn keyword worker '@'
-syn keyword box '$'
-syn keyword target '.'
-syn keyword boxOnTarget '*'
-syn keyword workerOnTarget '+'
+syn match wall '#'
+syn match worker '@'
+syn match box '\$'
+syn match target '\.'
+syn match boxOnTarget '\*'
+syn match workerOnTarget '+'
 
-hi def link wall Comment
-hi def link worker Statement
-hi def link box Todo
-hi def link target Type
-hi def link boxOnTarget Constant
+hi def link worker Comment
+hi def link box Constant
+hi def link target Todo
+hi def link boxOnTarget Statement
 hi def link workerOnTarget PreProc
